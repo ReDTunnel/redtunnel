@@ -23,8 +23,8 @@ services:
   dns:
     build: redtunnel-dns/
     ports:
-      - "172.31.33.238:53:53/udp"
-      - "172.31.33.238:53:53"
+      - "0.0.0.0:53:53/udp"
+      # - "0.0.0.0:53:53"
     expose:
       - 53
     restart: on-failure

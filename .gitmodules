@@ -1,6 +1,6 @@
 [submodule "redtunnel-dns"]
 	path = redtunnel-dns
-	url = ../redtunnel-dns.git
+	url = /ReDTunnel/redtunnel-dns.git
 [submodule "redtunnel-core"]
 	path = redtunnel-core
 	url = ../redtunnel-core.git
