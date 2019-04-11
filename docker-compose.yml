@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  core:
+    build: redtunnel-core/
+    ports:
+      - "80:3000"
+      - "3000:3000"
+      - "4040:3000"
+      - "5000:3000"
+      - "5800:3000"
+      - "7000:3000"
+      - "8000:3000"
+      - "8080:3000"
+      - "8090:3000"
+      - "8888:3000"
+      - "9000:3000"
+      - "9090:3000"
+    restart: on-failure
+    depends_on:
+      - dns
+      - database
+  dns:
+    build: redtunnel-dns/
+    ports:
+      - "172.31.33.238:53:53/udp"
+      - "172.31.33.238:53:53"
+    expose:
+      - 53
+    restart: on-failure
+  database:
+    image: "mongo:4.0.8"
+    expose:
+      - "27017"
+    volumes:
+      - "./redtunnel-database:/data/db"
+

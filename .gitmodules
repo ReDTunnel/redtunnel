@@ -1,0 +1,6 @@
+[submodule "redtunnel-dns"]
+	path = redtunnel-dns
+	url = git@github.com:ReDTunnel/redtunnel-dns.git
+[submodule "redtunnel-core"]
+	path = redtunnel-core
+	url = git@github.com:ReDTunnel/redtunnel-core.git
